@@ -16,9 +16,16 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .carousel-item img {
-            height: 500px;
+            width: 100%;
+            height: 400px;
             object-fit: cover;
-            margin : 0 auto;
+            object-position: center;
+            display: block;
+            margin: 0 auto;
+        }
+        .carousel-inner {
+            max-width: 1500px; /* atau sesuaikan dengan lebar yang diinginkan */
+            margin: 0 auto;
         }
         .hotel-info {
             padding: 50px 0;
@@ -26,7 +33,7 @@ if (!isset($_SESSION['username'])) {
         footer {
             background-color: #333;
             color: white;
-            padding: 20px 0;
+            padding: 1px 0;
             margin-top: 30px;
             font-size: 14px;
         }
@@ -74,28 +81,18 @@ if (!isset($_SESSION['username'])) {
 
     <!-- Image Slider -->
     <div id="hotelCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#hotelCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#hotelCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#hotelCarousel" data-bs-slide-to="2"></button>
-        </div>
+        
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="https://cache.marriott.com/marriottassets/marriott/CAIBR/caibr-exterior-0044-hor-feat.jpg">
             </div>
             <div class="carousel-item">
-                <img src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2020/01/20/1034/Hotel-du-Palais-Biarritz-P038-Hotel-Exterior.jpg/Hotel-du-Palais-Biarritz-P038-Hotel-Exterior.16x9.jpg">
+                <img src="https://cache.marriott.com/content/dam/marriott-renditions/BKKLA/bkkla-swimming-pool-1850-hor-feat.jpg">
             </div>
             <div class="carousel-item">
                 <img src="https://cache.marriott.com/marriottassets/marriott/SFOLC/sfolc-court-9285-hor-feat.jpg">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
     </div>
 
     <!-- Hotel Information -->

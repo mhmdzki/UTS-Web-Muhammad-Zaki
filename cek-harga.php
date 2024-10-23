@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         footer {
             background-color: #333;
             color: white;
-            padding: 20px 0;
+            padding: 1px 0;
             margin-top: 30px;
             font-size: 14px;
         }
